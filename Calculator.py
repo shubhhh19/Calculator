@@ -11,8 +11,12 @@ def mul(a, b):
     print("Answer: " + str(a) + " * " + str(b) + " = " + str(result) + "\n")
 
 def div(a, b):
-    result = a / b
-    print("Answer: " + str(a) + " / " + str(b) + " = " + str(result) + "\n")
+    if b != 0:
+        result = a / b
+        print("Answer: " + str(a) + " / " + str(b) + " = " + str(result) + "\n")
+    else:
+        print("Error: Cannot divide by zero.\n")
+            
 
 print("Welcome to Shubh's Companion!")
 while True:
@@ -46,4 +50,6 @@ while True:
         div(a, b)
     elif choice == 5:
         print("Exited.")
-        quit()
+        break
+    else: 
+        print("Invalid choice. Please select a number from 1 to 5")
